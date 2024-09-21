@@ -1,0 +1,57 @@
+/* Estilo general para todo el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Gris claro de fondo */
+    color: #333; /* Texto en gris oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Estilo para el contenedor principal */
+h1, p {
+    margin: 0 0 20px;
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 2.5em;
+    color: #222; /* Negro suave */
+    margin-bottom: 10px;
+}
+
+/* Estilo del párrafo */
+p {
+    font-size: 1.2em;
+    color: #666; /* Gris medio */
+}
+
+/* Estilo del botón */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ddd; /* Gris claro */
+    color: #333; /* Gris oscuro para contraste */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bbb; /* Gris un poco más oscuro al hacer hover */
+}
+
+/* Hacer que todo el contenido esté centrado y con un max-width */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Suave sombra para contraste */
+    border-radius: 10px;
+}
