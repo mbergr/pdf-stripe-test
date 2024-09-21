@@ -14,17 +14,17 @@
     <!-- Incluir Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
     <script>
-        // Inicializar Stripe con tu clave pública
+        // Inicializar Stripe con tu clave pública (en una sola línea)
         const stripe = Stripe('pk_test_51Q1TpaRx7WMyHoIl14pv39Hnbpk11VXCTfPPLNWAfM6YCUTkejb8I96faytIgf4FF0MXETBZhvpToNkJEw9rbiqr00b8pHjZGj');
 
         const checkoutButton = document.getElementById('checkout-button');
 
         checkoutButton.addEventListener('click', () => {
             stripe.redirectToCheckout({
-                lineItems: [{ price: 'price_1Q1UafRx7WMyHoIlY3tcdzU7', quantity: 1 }],
+                lineItems: [{ price: 'price_1Q1UafRx7WMyHoIlY3tcdzU7', quantity: 1 }], // Verifica que este sea el ID de precio correcto
                 mode: 'payment',
-                successUrl: 'https://mbergr.github.io/pdf-stripe-test/gracias', // URL de éxito
-                cancelUrl: 'https://mbergr.github.io/pdf-stripe-test/cancelado', // URL de cancelación
+                successUrl: 'https://mbergr.github.io/pdf-stripe-test/gracias.html', // Asegúrate de que la URL de éxito exista
+                cancelUrl: 'https://mbergr.github.io/pdf-stripe-test/cancelado.html', // Asegúrate de que la URL de cancelación exista
             }).then((result) => {
                 if (result.error) {
                     alert(result.error.message);
@@ -34,3 +34,4 @@
     </script>
 </body>
 </html>
+
